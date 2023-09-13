@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+
+<head>
+    <title>Lists and Links</title>
+</head>
+
+
+<body>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>aa</li>
+        <li>bb</li>
+        <li>cc</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>ab</li>
+        <li>bc</li>
+        <li>Cd</li>
+    </ul>
+
+
+
+    <h3>Hyperlink</h3>
+    <p>Visit our website: <a href="https://komar.edu.iq/" target="_blank">KUST</a></p>
+
+
+
+    <h3>Image with Alt Text</h3>
+    <img src="landscape.jpg" alt="A beautiful landscape">
+
+
+
+   
+
+        <title>Styled Table</title>
+        <style>
+            table {
+                width: 50%;
+                border-collapse: collapse;
+                margin: 20px auto;
+            }
+    
+            th, td {
+                border: 1px solid #301919;
+                padding: 8px;
+                text-align: center;
+            }
+    
+            th {
+                background-color: #333;
+                color: white;
+            }
+    
+            tbody tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+    
+            tfoot td {
+                background-color: #333;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Employee Information</h1>
+        <table>
+            <thead>
+                <tr>
+                </tr>
+                    <th>Fname</th>
+                    <th>Lname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>28</td>
+                </tr>
+                <tr>
+                    <td>Michael</td>
+                    <td>Johnson</td>
+                    <td>35</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Employees:</td>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+
+        <h3>Task Progress</h3>
+        <p>Task 1</p>
+        <progress value="50" max="100"></progress>
+        
+        <p>Task 2</p>
+        <progress value="75" max="100"></progress>
+        
+        <p>Task 3</p>
+        <progress value="25" max="100"></progress>
+
+
+
+        <h1>Contact Information</h1>
+        <form action="process_form.php" method="post">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br>
+    
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+    
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+    
+            <label>Email:</label>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="other">Other</option>
+            </select><br>
+    
+            <label>Interests:</label>
+            <input type="checkbox" id="music" name="interests[]" value="music">
+            <label for="music">Music</label>
+            <input type="checkbox" id="sports" name="interests[]" value="sports">
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="travel" name="interests[]" value="travel">
+            <label for="travel">Travel</label><br>
+    
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="10" cols="30"></textarea><br>
+    
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" value="John" readonly><br><!--can be functioned-->
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" value="John" disabled><br><!--can not be functioned-->
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe"><br>
+    
+            
+    
+            <input type="submit" value="Submit">
+        </form>
+</body>
