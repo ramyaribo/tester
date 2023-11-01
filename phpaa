@@ -1,0 +1,71 @@
+<html>
+<?php
+$servername = "localhost";
+$username = "aaa";
+$password = "aaaa";
+$dbname = "aa";
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+die("Connection failed: " . mysqli_connect_error());
+}
+?>
+<thead>
+    <tr>
+        <th>ID</th>
+         <th>Name</th>
+          <th>Email</th>
+           <th>Gender</th>
+            <th>Action</th>
+    </tr>
+</thead>
+
+<tfoot>
+    <tr>
+         <th>ID</th>
+          <th>Name</th>
+           <th>Email</th>
+            <th>Gender</th>
+             <th>Action</th>
+</tr>
+</tfoot>
+
+<body>
+    <?php
+    $select="SELECT * FROM ac";
+    $result=mysqli_query($conn, $select);
+    while($row=mysqli_fetch_assoc($result)){
+        ?>
+        <tr>
+            <td><?php echo $row["ID"]; ?></td>
+            <td><?php echo $row["name"]; ?></td>
+            <td><?php echo $row["email"]; ?></td>
+            <td><?php echo $row["gender"]; ?></td>
+    </tr>
+        <td>
+        <a href="edit.php?id=<?php echo $row["ID"]; ?>" class="btn btn-success">Edit</a>
+        <a href="delete.php?id=<?php echo $row["ID"]; ?>" class="btn btn-danger">Delete</a>
+    </td>
+    <?php
+    }
+    ?>
+    <form method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <select name="gender" id="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select><br><br>
+
+    <input type="submit" value="action">
+</form>
+
+    </body>
+</html>
